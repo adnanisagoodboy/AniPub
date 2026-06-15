@@ -16,6 +16,11 @@ Welcome to **AniPub**, the modern, ad-free, and privacy-first anime streaming pl
 
 Whether you're binge-watching classics like *One Piece* or exploring hidden gems, AniPub is your gateway to an endless anime adventure. Open-source, extensible, and community-driven—join us in shaping the future of anime streaming!
 
+```
+Currenlty we aren't able to block Ads by 100% .. it should be arround 97~100 % ..
+Working on Providing complete Ad Free Service to you all 
+
+```
 ## Table of Contents
 - [Features](#features)
 - [Why AniPub?](#why-anipub)
