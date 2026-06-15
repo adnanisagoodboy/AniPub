@@ -97,11 +97,11 @@
                         <div class="video-container">
                             <% if(video.type === "iframe") {%>
                             <% if(Number(AniEP) === 0 ) {%>
-                            <iframe <%=video.link%> sandbox="allow-same-origin allow-fullscreen" gyroscope picture-in-picture autoplay scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" allowfullscreen geolocation style="height:100%;width: 100%;"></iframe>
+                            <iframe <%=video.link%> sandbox=" allow-scripts allow-same-origin allow-fullscreen" gyroscope picture-in-picture autoplay scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" allowfullscreen geolocation style="height:100%;width: 100%;"></iframe>
                             <% } else { %>
                             <% const Episode = Number(AniEP) - 1 %>
                             
-                            <iframe <%=video.ep[Episode].link%> sandbox="allow-same-origin allow-fullscreen" gyroscope picture-in-picture autoplay geolocation scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" allowfullscreen style="height:100%;width: 100%;"></iframe>
+                            <iframe <%=video.ep[Episode].link%> sandbox=" allow-scripts allow-same-origin allow-fullscreen" gyroscope picture-in-picture autoplay geolocation scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" allowfullscreen style="height:100%;width: 100%;"></iframe>
                             <%}%>
                             <% } else {%>
                             <video id="my-video" class="video-js vjs-matrix video-player " controls autoplay preload="auto" data-setup="{}">
