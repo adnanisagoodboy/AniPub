@@ -14,7 +14,7 @@ function getClientIP(req) {
 // Global limiter
 const globalLimiter = rateLimit({
   windowMs: 60 * 1000,       
-  max: 80,                   
+  max: 60,                   
   message: { error: 'Too many requests, try again in a minute' },
   skip: (req) => isGoodBot(req),
   standardHeaders: true,
@@ -27,7 +27,9 @@ const streamLimiter = rateLimit({
   windowMs: 60 * 1000,
   max: 6,                 
   message: { error: 'Streaming rate limit exceeded. Wait 60s.' },
-  skipFailedRequests: true,
+  // skipFailedRequests: true,
+   standardHeaders: true,                   
+  legacyHeaders: false,     
   keyGenerator: (req) => getClientIP(req),
 });
 
@@ -35,6 +37,8 @@ const streamLimiter = rateLimit({
 const infoLimiter = rateLimit({
   windowMs: 60 * 1000,
   max: 25,
+   standardHeaders: true,                   
+  legacyHeaders: false,     
   message: { error: 'Too many info requests.' },
   keyGenerator: (req) => getClientIP(req),
 });
